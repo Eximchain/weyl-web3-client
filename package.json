@@ -1,6 +1,6 @@
 {
   "name": "@eximchain/weyl-web3-client",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Tiny npm package which configures a web3.eth.Contract() for our WeylGov contract.",
   "main": "index.js",
   "scripts": {
