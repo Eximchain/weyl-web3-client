@@ -1,0 +1,27 @@
+{
+  "name": "@eximchain/weyl-web3-client",
+  "version": "0.0.1",
+  "description": "Tiny npm package which configures a web3.eth.Contract() for our WeylGov contract.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eximchain/weyl-web3-client.git"
+  },
+  "keywords": [
+    "weyl",
+    "eximchain",
+    "web3"
+  ],
+  "author": "John O'Sullivan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Eximchain/weyl-web3-client/issues"
+  },
+  "homepage": "https://github.com/Eximchain/weyl-web3-client#readme",
+  "dependencies": {
+    "web3": "^1.0.0-beta.48"
+  }
+}
