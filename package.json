@@ -1,9 +1,11 @@
 {
   "name": "@eximchain/weyl-web3-client",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Tiny npm package which configures a web3.eth.Contract() for our WeylGov contract.",
-  "main": "index.js",
+  "main": "./build/index.js",
   "scripts": {
+    "prepublishOnly": "npm run build",
+    "build": "tsc --esModuleInterop index.ts --outDir ./build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -1,6 +1,16 @@
-const Web3 = require('web3');
+import Web3 from 'web3';
+import { Contract } from 'web3-eth-contract';
 
-module.exports.default = (url) => {
+export type isBlockMaker = (address:string)=>Promise<boolean>
+
+export interface Client {
+  contract : Contract
+  isBlockMaker : isBlockMaker
+}
+
+export type buildClient = (url:string) => Client
+
+export const buildClient:buildClient = (url) => {
     const web3 = new Web3(new Web3.providers.HttpProvider(url));
     const BV = new web3.eth.Contract(require('./bvABI').default, '0x0000000000000000000000000000000000000020')
     return {
@@ -8,3 +18,5 @@ module.exports.default = (url) => {
         isBlockMaker : (address) => { return BV.methods.isBlockMaker(address).call() }
     }
 };
+
+export default buildClient;
